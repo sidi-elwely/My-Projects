@@ -1,0 +1,112 @@
+.container {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+.blocs {
+	display:flex;
+	flex-direction:column;
+	flex-basis:20%;
+}
+.bloc{
+	width: 80%;
+    height: 30%;
+    margin-left: 10%;
+    margin-top: 15%;
+    padding-bottom: 0%;
+    background-color: orange;
+    border: solid;
+    border-radius: 30px;
+    border-color: #40b8a8;
+	display:flex;
+	text-align:center;
+}
+
+.text{
+	margin-left: auto;
+    margin-right: auto;
+	font-weight: bold;
+	color:white;
+}
+
+#piechart1,#piechart2 {
+	height:40%;
+	width:40%;
+}
+
+
+
+.resultat{
+	
+	font-size: 1.2em;
+	font-weight: bold;
+	color:black;
+	text-align:center;
+}
+
+.header {
+	background-color: #ff9e2c;
+	display:flex;
+	height:10%;
+	flex-direction:row;
+	justify-content:space-between;
+}
+.logo {
+	flex-basis:80%;
+	height:100%;
+}
+.logo img {
+	height:100%;
+	width:20%;
+}
+.profil {
+	color:white;
+	flex-basis:20%;
+
+}
+.profil img {
+	height:40%;
+	width:10%;
+	padding-left:20%;
+}
+.right-half {
+  flex: 1;
+  padding: 1rem;
+}
+.menu{
+    display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	gap: 40px;
+}
+
+.menu li{
+    list-style-type:none;
+    text-align:space-between;
+}
+
+.menu a{
+       
+    box-shadow:2px 2px 5px gray;
+    display:block;
+    text-align:center;
+    background-color:rgb(64,224,208);
+    border-radius:4px;
+    border:1px solid #ff9933;
+    color:rgb(252, 252, 252);
+    text-decoration: none;
+    width:190px;
+    height: 100px;
+    transition:1s;
+	z-index:1;
+    transition: all 1s;
+}
+
+.menu a:hover, .menu a:focus 
+{
+    transform:scale(1.1);
+}
+
+
+
+	
