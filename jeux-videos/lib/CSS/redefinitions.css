@@ -1,0 +1,28 @@
+/*******************************************************
+ *                                                     *
+ *Fichier qui permet de modifier des styles par défaut *
+ *                                                     *
+ *******************************************************/
+ 
+
+/* Redéfinition du style du bouton submit */
+button[type="submit"]
+{
+	border: none;                           /* Enlève toutes les bordures */
+	border-bottom:2px solid #092435;      /* Ajoute une bordure en bas du bouton */
+	height: 33px;                           /* Définit la hauteur du bouton */
+}
+
+
+/* Redéfinition du style de la balise a (elle permet de faire des liens)*/
+a 
+{
+    text-decoration: none;                  /* Supprime le surlignage par défaut des liens */
+}
+
+
+/* Redéfinition du style d'une balise a d'un lien déjà visité */
+a:visited 
+{
+	color: initial;                         /* Réinitialise la couleur des liens visités à la couleur initiale */
+}

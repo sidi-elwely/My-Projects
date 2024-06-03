@@ -1,0 +1,303 @@
+/*************************************************
+ *                                               *
+ * Fichier CSS contenant les classes principales *
+ *                                               *
+ *************************************************/
+
+
+/* Pour enlever les marges du navigateur */
+*
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	background-color: black;   /* Permet d'avoir les bandes latérales en noires */
+}
+
+/* -------------------------------------------------POLICES-------------------------------------------------*/
+@font-face 
+{
+  font-family: 'Zorque';
+  src: url('font/zorque.otf') format('truetype');
+}
+
+@font-face 
+{
+  font-family: 'Tytoon_mist';
+  src: url('font/tytoon_mist.ttf') format('truetype');
+}
+
+@font-face 
+{
+  font-family: 'Calibri';
+  src: url('font/calibri.ttf') format('truetype');
+}
+
+
+/* ----------------------------------------------------TITRE-------------------------------------------------*/
+.Titre
+{
+	width:70%;
+	float:left;
+	height:175px;
+}
+
+.Titre img
+{
+	width: 150px; /* Largeur de l'image qui n'est pas à 200px comme dans l'énoncé puisque la hauteur de titre est de 175px ! */
+}
+	
+.Titre font
+{
+	font-family: 'Zorque', sans-serif;
+	font-size: 60px;
+	color: #092435;
+}
+
+.Titre table
+{
+	display:flex;
+	align-items: center; 		/* Centrer verticalement le contenu */
+    justify-content: center;    /* Centrer horizontalement le contenu */
+}
+
+
+/* ------------------------------------------CADRE-AUTHENTIFICATION-----------------------------------------*/
+.Cadre-authentification
+{
+	width:30%;
+	float:left;
+	height:175px;
+}
+
+.Cadre-authentification table 
+{
+	display: flex;
+	align-items: center; 		     /* Centrer verticalement le contenu */
+    justify-content: right;    		 /* Mettre les champs du mail et du mot de passe vers la droite */
+	text-align: right;   			 /* Aligner le texte du tableau à droite */
+	background-color:#4494cb;
+	width:96%;                       /* Pour avoir une marge à droite et compenser celle mise à gauche */
+	margin-left: 2%;				 /* Marge pour aligner le tableau au panier (sinon la bar de scroll était collée au panier et ce n'était pas joli) */
+	height:130px;					 /* Hauteur inférieure à 175px pour pouvoir mettre les boutons en dessous */
+	font-size: 20px;				
+}
+
+	
+/* --------------------------------------------------CONTENU------------------------------------------------*/
+.Contenu
+{
+	width:70%;
+	clear:both;
+	float:left;
+	height:500px;
+	display: flex;
+	flex-wrap: wrap;                 /* Permet aux éléments de se replier sur plusieurs lignes si leur taille dépasse celle de leur conteneur */
+	justify-content: space-evenly;   /* Répartit l'espace entre les éléments de manière égale sur une ligne dans le conteneur */
+	overflow-y: auto;                /* Barre de scroll pour le contenu des articles */
+}
+
+.cercle                              /* Classe pour les catégories */
+{
+  	width: 207px;                    /* Ajuster la largeur du cercle */
+	height: 200px;                   /* Ajustez la hauteur du cercle */
+	border-radius: 50%; 			 /* Création d'un cercle (à partir d'un carré) */
+	background-color: #4494cb;
+	border: 2px solid black;
+	display: flex;
+	align-items: center;             /* Centrer verticalement le contenu */
+}
+
+.cercle:hover                        /* Permet de voir lorsuqe l'on est sur une catégorie */
+{
+	background-color: #092435;
+}
+
+.cercle img
+{
+	max-width: 74%; 				 /* S'assurer que l'image ne dépasse pas du conteneur */
+	display: block; 				 /* S'assurer que l'image ne crée pas d'espaces vides */
+	margin: auto; 					 /* Centrer l'image horizontalement */
+
+}
+
+.cercle-container                    /* Contient le cercle et le nom de la catégorie */
+{
+	display: flex;
+	flex-direction: column;          /* Permet d'empiler les éléments verticalement */
+	align-items: center;             /* Eléments centrés verticalements à l'intérieur du conteneur */
+}
+
+.cercle-container font
+{
+	font-family: 'Zorque', sans-serif;
+	font-size: 18px;
+	color: #092435;
+}
+
+/* ----------------------------------------------------Panier-----------------------------------------------*/
+.Panier
+{
+	width:30%;
+	float:left;
+	height:500px;
+	position: relative;
+	top: 38px;                       /* Eviter que le panier soit collé aux boutons "S'INSCRIRE" et "CONNEXION" */
+	overflow-y: auto;                /* Cas où on a une grosse commande (rare donc pas de marge pour la barre de scroll -> moins esthétique)*/
+}	
+
+.Panier img
+{
+	width: 50px;                     /* Pour l'image du panier */
+}
+
+.Panier table 
+{
+	background:linear-gradient(white, #d8d8d8);
+	width: 96%;                      /* Pour avoir une marge à droite et compenser celle mise à gauche */
+	margin-left: 2%;				 /* Marge permettant d'éviter que le panier soit collé à la barre de scroll (plus esthétique) */
+	border: 2px solid black;
+	font-family: 'Calibri', sans-serif; /* Police ici car elle ne va concerner que le tableau */
+}
+
+.Panier .ligne2 th
+{
+	border-top: 1px solid black;
+	height: 50px; 					 /* Permet d'avoir une ligne vide quand il n'y a pas d'article */
+}
+
+.Panier .ligne3.contenu-present th   /* Ajoute la bordure supérieure si du contenu est présent dans la troisième ligne */
+{
+    border-top: 1px solid black;
+}
+
+.Caddie-container  					 /* Contient le caddie et "votre panier" */
+{
+	display: flex;
+    justify-content: center;         /* Centrer horizontalement le contenu */
+	align-items: center;             /* Centrer verticalemement le contenu */
+}
+
+
+/* -------------------------------------------------PIEDS DE PAGE----------------------------------------------*/
+.Pieds_de_page
+{
+	width:100%;
+	float:left;
+	height:50px;
+}
+
+
+/* ------------------------------------------------------PAGE--------------------------------------------------*/
+.Page
+{
+	display:flex;
+	flex-wrap:wrap;
+	margin:auto;
+	max-width:1200px;
+    background: url('img_site/fond-wide-1200px.gif');
+	padding-top: 25px;				  /* Permet d'ajouter une marge en haut de la page */
+	background-size: cover;  		  /* Redimension de l'image pour couvrir entièrement la div */
+	min-height: calc(100vh - 25px);   /* Ajuster la hauteur en fonction de la marge mise en haut de la page */
+}
+
+
+/* -------------------------------------------ECRAN entre 750px et 1200px--------------------------------------*/
+@media screen and (min-width: 750px) and (max-width: 1200px) 
+{
+    .article 
+	{
+		width: 80%;
+		height: 42%;
+	}
+}
+
+
+/* ----------------------------------------------ECRAN DE SMARTPHONE-------------------------------------------*/
+@media screen and (max-width:750px)
+{
+	/* ----------------------------------------------------TITRE-----------------------------------------------*/
+	.Titre
+	{
+		width:100%;
+		
+	}
+	
+	.Titre img
+	{
+		width: 100px;
+	}
+	
+	.Titre font
+	{
+	  font-size: 40px;
+	}
+
+	.Titre table
+	{
+		height:175px;   			    /* Permet de centrer le tableau */
+	}
+
+	/* ------------------------------------------CADRE D'AUTHENTIFICATION----------------------------------------*/
+	.Cadre-authentification
+	{
+		width:100%;
+	}
+	
+	.Cadre-authentification table 
+	{
+      justify-content: center;
+	  text-align: center;
+	  width:100%;                   
+	  margin-left: 0;
+	}
+	
+	.bouton-container 
+	{
+		justify-content: flex-end;       /* Aligner les boutons à droite : il va aussi agir sur le boutons "RETOUR" */ 
+		width: 100%;                     
+		margin-left: 0;
+	}
+
+	/* --------------------------------------------------CONTENU--------------------------------------------------*/
+	.Contenu
+	{
+		width:100%;
+		margin-right: 2%;               /* Eviter que les deux barres de scroll ne soient collées l'une à l'autre */
+	}
+	
+	.cercle 
+	{
+		width: 130px; 					/* Réajustement de la largeur du cercle */
+		height: 130px; 					/* Réajustement de la hauteur du cercle */
+		margin-top: 35%;				/* Décollement des catégories des bouton "S'INSCRIRE" et "CONNEXION" (plus esthétique) */
+	}
+
+	.article 
+	{
+		width:100%;
+	}
+
+	/* ----------------------------------------------------PANIER-------------------------------------------------*/
+	.Panier
+	{
+		width:100%;
+	}	
+	
+	/* -----------------------------------------------------Page--------------------------------------------------*/
+	.Page
+	{
+		background: #c0d4e7;
+		padding-top: 0px;
+		min-height: 0;
+	}
+}
+
+
+
+
+
+

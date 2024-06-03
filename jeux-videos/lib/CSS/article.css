@@ -1,0 +1,59 @@
+/********************************************************************************************************
+*                                                                                                       *
+* Fichier CSS contenant la définition des styles pour l'affichage des articles dans la classe "contenu" *
+*                                                                                                       *
+*********************************************************************************************************/
+
+
+.article                                /* Classe qui va contenir toutes les informations de l'article */
+{
+	background:linear-gradient(white, #d8d8d8);
+	height:42%;
+	width:46%;
+	border-bottom-left-radius: 100px;   /* Arc de cercle pour le bas du rectangle */
+	border-top-left-radius: 100px;      /* Arc de cercle pour le haut du rectangle */
+	float:left;							/* Pour avoir un autre cadre à droite */
+	margin: 16px;                       /* Permet de mettre de l'espace entre les rectancles */
+}
+
+
+.article img 
+{
+	height:188px;                         /* Ajuster la hauteur de l'image pour ne pas trop la déformer */
+	width: 140px;;                        /* Ajuster la largeur de l'image pour ne pas trop la déformer */
+	float:left;							  /* Pour avoir du texte à droite de l'image */
+	padding-top: 11px;                    /* Marge en haut de l'image */
+	padding-left:15px;                    /* Marge à gauche de l'image */
+}
+
+
+.article p                                /* Modification de la balise p pour la classe article (d'où sa présence ici) */
+{
+	padding-top:40px;
+	padding-left:168px;                   /* Indentation du texte */
+}
+
+
+.article .libelle
+{
+	font-family: 'Zorque' , sans-serif;
+	font-size: 16px;
+	color: #092435;
+}
+
+
+.article .detail
+{
+	font-family: 'Calibri' , sans-serif;
+	font-size: 11px;
+	color:#c0d4e7;
+	font-weight: bold;                    /* Pemet d'augmenter la visibilité des détails */
+}
+
+
+.article .prix
+{
+	font-family: 'Zorque' , sans-serif;
+	font-size: 18px;
+	color:#4494cb;
+}

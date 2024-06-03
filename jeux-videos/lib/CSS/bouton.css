@@ -1,0 +1,57 @@
+/***************************************************************
+ *                                                             *
+ * Fichier CSS contenant la définition des boutons du site web *
+ *                                                             *
+ ***************************************************************/
+
+
+.bouton                    /* Style de base pour les boutons */
+{
+	background-color:#fff;
+	height:24px;
+	border-bottom:2px solid #092435;
+	padding:3px 10px 3px 10px;
+	margin:6px 10px 3px 10px;
+}
+
+
+.bouton-container            /* Style du conteneur pour les boutons */
+{
+    display: flex;
+	flex-wrap:wrap;
+    justify-content: center; /* Aligne les boutons horizontalement */
+    align-items: center;     /* Aligne les boutons verticalement */
+    width:98%;
+    margin-left: 2%;         /* Permet d'avoir la même marge qu'au niveau du cadre d'authentification (permet de mieux centrer le bouton retour aussi) */
+    margin-top: 3px;         /* Permet au bouton de ne pas être collé à l'élément du dessus */
+}
+
+
+.bouton-container2            /* Style du conteneur pour le bouton "VIDER LE PANIER" -> celui-ci doit rester centré */
+{                             /* Répétition de code mais nous n'avons pas trouvé mieux */
+    display: flex;
+	flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;  
+    width:98%;
+    margin-left: 2%;     
+    margin-top: 3px;       
+}
+
+
+.bouton:hover                /* Style lorsqu'on survole le bouton avec la souris */
+{
+	background-color:#092435;
+	border-bottom:2px solid #fff;
+	color:#fff;
+}
+
+                             
+.bouton font                  /* Style spécifique pour les balises font d'un bouton*/
+{
+	font-family: 'Tytoon_mist', sans-serif;
+	font-weight:normal;
+	font-size:26px;
+}
+
+
